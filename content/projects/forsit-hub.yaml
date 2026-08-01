@@ -16,10 +16,9 @@ stack:
   - nuxt-auth-utils
 brandColor: "#10B981"
 logo: /projects/forsit-hub/logo.svg
-hero: /projects/forsit-hub/hero.svg
-screenshots:
-  - /projects/forsit-hub/metrics.svg
-  - /projects/forsit-hub/plans.svg
+demo: forsit-hub-dashboard
+hero: null
+screenshots: []
 links:
   live: null
   repo: null
