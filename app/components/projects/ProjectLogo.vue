@@ -29,16 +29,16 @@ const containerClass = computed(() =>
     class="flex items-center gap-3"
     :class="containerClass"
   >
-    <NuxtImg
+    <img
       :src="project.logo"
       :alt="`${project.name} logo`"
       :class="[markClass, 'shrink-0 object-contain']"
-    />
-    <NuxtImg
+    >
+    <img
       v-if="project.logoText"
       :src="project.logoText"
       :alt="project.name"
       :class="[textClass, 'shrink-0 object-contain']"
-    />
+    >
   </div>
 </template>

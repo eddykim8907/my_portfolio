@@ -217,8 +217,23 @@ export function compassSparklinePath(
   width: number,
   height: number,
 ): string {
-  if (points.length === 0) {
+  const plotPoints = compassChartPlotPoints(points, width, height)
+  if (plotPoints.length === 0) {
     return ''
+  }
+
+  return plotPoints
+    .map((point, index) => `${index === 0 ? 'M' : 'L'} ${point.x.toFixed(1)} ${point.y.toFixed(1)}`)
+    .join(' ')
+}
+
+export function compassChartPlotPoints(
+  points: CompassDailyPoint[],
+  width: number,
+  height: number,
+): Array<CompassDailyPoint & { x: number; y: number }> {
+  if (points.length === 0) {
+    return []
   }
 
   const values = points.map((point) => point.value)
@@ -226,13 +241,11 @@ export function compassSparklinePath(
   const max = Math.max(...values)
   const range = max - min || 1
 
-  return points
-    .map((point, index) => {
-      const x = (index / (points.length - 1 || 1)) * width
-      const y = height - ((point.value - min) / range) * (height - 4) - 2
-      return `${index === 0 ? 'M' : 'L'} ${x.toFixed(1)} ${y.toFixed(1)}`
-    })
-    .join(' ')
+  return points.map((point, index) => ({
+    ...point,
+    x: (index / (points.length - 1 || 1)) * width,
+    y: height - ((point.value - min) / range) * (height - 4) - 2,
+  }))
 }
 
 export function compassAreaPath(

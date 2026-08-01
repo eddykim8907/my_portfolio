@@ -15,12 +15,11 @@ stack:
   - AG Grid Enterprise
   - Pinia
 brandColor: "#6366F1"
-logo: /projects/viralhook/logo.svg
-logoText: /projects/viralhook/logo-text.svg
-hero: /projects/viralhook/hero.svg
-screenshots:
-  - /projects/viralhook/campaigns.svg
-  - /projects/viralhook/matchmaking.svg
+logo: /projects/viralhook/logo-white.svg
+logoText: /projects/viralhook/logo-text-white.svg
+demo: viralhook-partner-pairing
+hero: null
+screenshots: []
 links:
   live: null
   repo: null

@@ -1,13 +1,11 @@
 <script setup lang="ts">
 import type { CompassDemoSelection } from '~/data/demos/compass'
 import {
-  compassAreaPath,
   compassDelta,
   compassDemoAccounts,
   compassDemoDate,
   compassDemoSkus,
   compassDemoTotals,
-  compassSparklinePath,
   formatCompassCurrency,
   formatCompassNumber,
 } from '~/data/demos/compass'
@@ -15,26 +13,24 @@ import {
 const totalsDelta = compassDelta(compassDemoTotals.sales, compassDemoTotals.salesPrev)
 const chartWidth = 220
 const chartHeight = 56
-const areaPath = compassAreaPath(compassDemoTotals.trend, chartWidth, chartHeight)
-const linePath = compassSparklinePath(compassDemoTotals.trend, chartWidth, chartHeight)
 
-const modalSelection = ref<CompassDemoSelection | null>(null)
+const drawerSelection = ref<CompassDemoSelection | null>(null)
 
 function openAccount(row: (typeof compassDemoAccounts)[number]) {
-  modalSelection.value = { type: 'account', row }
+  drawerSelection.value = { type: 'account', row }
 }
 
 function openSku(row: (typeof compassDemoSkus)[number]) {
-  modalSelection.value = { type: 'sku', row }
+  drawerSelection.value = { type: 'sku', row }
 }
 
-function closeModal() {
-  modalSelection.value = null
+function closeDrawer() {
+  drawerSelection.value = null
 }
 </script>
 
 <template>
-  <div class="overflow-hidden rounded-xl border border-slate-200 bg-white text-sm text-slate-700 shadow-xl shadow-black/20">
+  <div class="relative overflow-hidden rounded-xl border border-slate-200 bg-white text-sm text-slate-700 shadow-xl shadow-black/20">
     <!-- App header -->
     <div class="flex h-11 items-center gap-3 bg-[#29AAE1] px-4">
       <img
@@ -63,7 +59,7 @@ function closeModal() {
         </div>
       </div>
       <p class="mt-2 text-xs text-slate-500">
-        Click any account or SKU row to open a detail modal.
+        Click any account or SKU row to open a detail panel.
       </p>
     </div>
 
@@ -100,23 +96,13 @@ function closeModal() {
         <p class="mb-2 text-[11px] uppercase tracking-wide text-slate-400">
           Sales trend
         </p>
-        <svg
-          :viewBox="`0 0 ${chartWidth} ${chartHeight}`"
-          class="h-14 w-full max-w-[220px]"
-          aria-hidden="true"
-        >
-          <path
-            :d="areaPath"
-            fill="#06B6D4"
-            fill-opacity="0.18"
-          />
-          <path
-            :d="linePath"
-            fill="none"
-            stroke="#29AAE1"
-            stroke-width="2"
-          />
-        </svg>
+        <CompassDemoHoverChart
+          :points="compassDemoTotals.trend"
+          :width="chartWidth"
+          :height="chartHeight"
+          show-area
+          class="h-14 max-w-[220px]"
+        />
       </div>
 
       <div class="bg-white p-4 md:col-span-1">
@@ -191,19 +177,18 @@ function closeModal() {
             {{ formatCompassNumber(account.units) }}
           </p>
         </div>
-        <div class="hidden md:block">
-          <svg
-            viewBox="0 0 100 28"
-            class="h-7 w-full"
-            aria-hidden="true"
-          >
-            <path
-              :d="compassSparklinePath(account.trend, 100, 28)"
-              fill="none"
-              :stroke="compassDelta(account.sales, account.salesPrev).positive ? '#22c55e' : '#ef4444'"
-              stroke-width="2"
-            />
-          </svg>
+        <div
+          class="hidden md:block"
+          @click.stop
+        >
+          <CompassDemoHoverChart
+            :points="account.trend"
+            :width="100"
+            :height="28"
+            :stroke="compassDelta(account.sales, account.salesPrev).positive ? '#22c55e' : '#ef4444'"
+            :accent="compassDelta(account.sales, account.salesPrev).positive ? '#22c55e' : '#ef4444'"
+            class="h-7"
+          />
         </div>
       </button>
     </div>
@@ -271,19 +256,18 @@ function closeModal() {
               <td class="px-4 py-3 text-slate-700">
                 {{ formatCompassNumber(sku.orders) }}
               </td>
-              <td class="px-4 py-3">
-                <svg
-                  viewBox="0 0 80 24"
+              <td
+                class="px-4 py-3"
+                @click.stop
+              >
+                <CompassDemoHoverChart
+                  :points="sku.trend"
+                  :width="80"
+                  :height="24"
+                  :stroke="compassDelta(sku.sales, sku.salesPrev).positive ? '#22c55e' : '#ef4444'"
+                  :accent="compassDelta(sku.sales, sku.salesPrev).positive ? '#22c55e' : '#ef4444'"
                   class="h-6 w-20"
-                  aria-hidden="true"
-                >
-                  <path
-                    :d="compassSparklinePath(sku.trend, 80, 24)"
-                    fill="none"
-                    :stroke="compassDelta(sku.sales, sku.salesPrev).positive ? '#22c55e' : '#ef4444'"
-                    stroke-width="2"
-                  />
-                </svg>
+                />
               </td>
             </tr>
           </tbody>
@@ -291,9 +275,9 @@ function closeModal() {
       </div>
     </div>
 
-    <CompassDemoDetailModal
-      :selection="modalSelection"
-      @close="closeModal"
+    <CompassDemoDetailDrawer
+      :selection="drawerSelection"
+      @close="closeDrawer"
     />
   </div>
 </template>
