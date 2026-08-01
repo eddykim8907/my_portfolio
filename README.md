@@ -83,6 +83,16 @@ Static output via `npm run generate`. Deploy `.output/public` to Vercel, Cloudfl
 
 Set `NUXT_PUBLIC_SITE_URL` to your production domain (e.g. `https://yourname.dev`).
 
+## Site content
+
+Edit `app/config/site.ts` for personal copy used across the home page, about page, header, and footer:
+
+- `name`, `title`, `bio`, `location`
+- `about.paragraphs` — longer bio on `/about`
+- `skills` — grouped skill lists
+- `social` — GitHub, LinkedIn, email links (footer + about contact)
+- `resume` — path to PDF in `public/` (add `public/resume.pdf` when ready)
+
 ## License
 
 Code: MIT. Project screenshots and logos remain property of their respective products/clients.

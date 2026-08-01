@@ -1,4 +1,6 @@
 <script setup lang="ts">
+const { site } = useSite()
+
 const links = [
   { label: 'Projects', to: '/projects' },
   { label: 'About', to: '/about' },
@@ -12,7 +14,7 @@ const links = [
         to="/"
         class="text-lg font-semibold tracking-tight text-white transition hover:text-neutral-300"
       >
-        Eddy
+        {{ site.name }}
       </NuxtLink>
 
       <nav class="flex items-center gap-6">
