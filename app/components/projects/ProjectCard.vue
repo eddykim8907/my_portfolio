@@ -13,35 +13,19 @@ defineProps<{
     :style="{ '--project-accent': project.brandColor }"
   >
     <div
-      v-if="project.hero && !project.demo"
-      class="overflow-hidden border-b border-neutral-800"
+      class="flex h-24 items-center justify-center border-b border-neutral-800 px-4 sm:h-28"
+      :style="{
+        background: `linear-gradient(145deg, color-mix(in srgb, ${project.brandColor} 22%, transparent) 0%, transparent 55%)`,
+      }"
     >
-      <NuxtImg
-        :src="project.hero"
-        :alt="`${project.name} preview`"
-        class="aspect-video w-full object-cover object-top transition duration-300 group-hover:scale-[1.02]"
+      <ProjectLogo
+        :project="project"
+        size="hero"
+        class="transition duration-300 group-hover:scale-[1.02]"
       />
     </div>
 
-    <div
-      v-else-if="project.demo"
-      class="flex aspect-video items-center justify-center border-b border-neutral-800 bg-[#29AAE1]/10"
-    >
-      <div class="space-y-2 text-center">
-        <p class="text-xs font-medium uppercase tracking-widest text-[#29AAE1]">
-          Interactive preview
-        </p>
-        <p class="text-sm text-neutral-400">
-          Sample data demo
-        </p>
-      </div>
-    </div>
-
     <div class="flex flex-1 flex-col p-6">
-      <div class="mb-5">
-        <ProjectLogo :project="project" size="card" />
-      </div>
-
       <div class="mb-3 flex items-center gap-2">
         <span
           class="h-2 w-2 rounded-full"
