@@ -119,9 +119,9 @@ function closeDetail() {
         </div>
       </header>
 
-      <div
+      <DemoScrollArea
         v-if="viewMode === 'grid'"
-        class="min-h-0 flex-1 overflow-y-auto overscroll-y-contain bg-zinc-900 pb-3.5 pr-3.5 pt-3.5"
+        class="bg-zinc-900 pb-3.5 pr-3.5 pt-3.5"
       >
         <div class="flex flex-col gap-3.5">
           <div
@@ -151,11 +151,11 @@ function closeDetail() {
             </div>
           </div>
         </div>
-      </div>
+      </DemoScrollArea>
 
-      <div
+      <DemoScrollArea
         v-else
-        class="min-h-0 flex-1 overflow-y-auto overscroll-y-contain bg-zinc-900 p-3.5"
+        class="bg-zinc-900 p-3.5"
       >
         <div class="overflow-hidden rounded-xl border border-zinc-700 bg-zinc-950">
           <table class="min-w-full text-left text-xs">
@@ -214,7 +214,7 @@ function closeDetail() {
             </tbody>
           </table>
         </div>
-      </div>
+      </DemoScrollArea>
 
       <!-- Detail panel -->
       <Transition

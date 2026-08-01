@@ -123,7 +123,7 @@ const ppcCards = computed(() => [
         </span>
       </header>
 
-      <div class="min-h-0 flex-1 overflow-y-auto overscroll-y-contain [scrollbar-gutter:stable]">
+      <DemoScrollArea>
         <div class="space-y-4 p-4">
           <div class="flex flex-wrap items-center justify-between gap-3">
             <div>
@@ -494,7 +494,7 @@ const ppcCards = computed(() => [
             </div>
           </div>
         </div>
-      </div>
+      </DemoScrollArea>
     </div>
   </div>
 </template>

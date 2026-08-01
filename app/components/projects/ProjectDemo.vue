@@ -24,7 +24,7 @@ const demoComponent = computed(() => resolveProjectDemo(props.project.demo))
     </div>
 
     <ClientOnly>
-      <div class="max-h-[min(720px,75vh)] overflow-y-auto overscroll-y-contain rounded-xl [scrollbar-gutter:stable]">
+      <div class="overflow-hidden rounded-xl">
         <component :is="demoComponent" />
       </div>
       <template #fallback>
