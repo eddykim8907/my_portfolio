@@ -2,12 +2,12 @@
 
 Personal portfolio site showcasing four products built at Forsit:
 
-| Project | Description |
-|---------|-------------|
-| **Bloomkare** | Creator–brand campaign platform for inbound seeding marketing |
-| **Compass** | Internal Forsit ops console (Amazon, TikTok Shop, Shopify analytics) |
-| **ForsitHub** | Client-facing brand portal and multi-platform sales dashboard |
-| **ViralHook** | Creator pipeline tool — matchmaking through delivery and payment |
+| Project       | Description                                                          |
+| ------------- | -------------------------------------------------------------------- |
+| **Bloomkare** | Creator–brand campaign platform for inbound seeding marketing        |
+| **Compass**   | Internal Forsit ops console (Amazon, TikTok Shop, Shopify analytics) |
+| **ForsitHub** | Client-facing brand portal and multi-platform sales dashboard        |
+| **ViralHook** | Creator pipeline tool — matchmaking through delivery and payment     |
 
 ## Stack
 
@@ -27,12 +27,12 @@ Dev server: [http://localhost:3000](http://localhost:3000)
 
 ## Scripts
 
-| Command | Description |
-|---------|-------------|
-| `npm run dev` | Start development server |
-| `npm run build` | Build for production (SSR) |
+| Command            | Description                                |
+| ------------------ | ------------------------------------------ |
+| `npm run dev`      | Start development server                   |
+| `npm run build`    | Build for production (SSR)                 |
 | `npm run generate` | Pre-render static site to `.output/public` |
-| `npm run preview` | Preview production build locally |
+| `npm run preview`  | Preview production build locally           |
 
 ## Project structure
 

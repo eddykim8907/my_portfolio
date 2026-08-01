@@ -1,8 +1,8 @@
 slug: viralhook
 name: ViralHook
 tagline: Creator pipeline platform from matchmaking through delivery and payment
-role: Full-stack developer
-year: "2025–2026"
+role: Frontend developer
+year: "2025.08 – 2025.12"
 status: Production
 stack:
   - Nuxt 4
@@ -14,6 +14,7 @@ stack:
   - Pinia
 brandColor: "#6366F1"
 logo: /projects/viralhook/logo.svg
+logoText: /projects/viralhook/logo-text.svg
 hero: /projects/viralhook/hero.svg
 screenshots:
   - /projects/viralhook/campaigns.svg

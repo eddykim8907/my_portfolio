@@ -1,37 +1,29 @@
 <script setup lang="ts">
-const route = useRoute()
-const slug = computed(() => route.params.slug as string)
-const { project } = useProject(slug)
+const route = useRoute();
+const slug = computed(() => route.params.slug as string);
+const { project } = useProject(slug);
 
 if (!project.value) {
   throw createError({
     statusCode: 404,
-    statusMessage: 'Project not found',
-  })
+    statusMessage: "Project not found",
+  });
 }
 
-const galleryImages = computed(() => project.value?.screenshots ?? [])
+const galleryImages = computed(() => project.value?.screenshots ?? []);
 
 usePortfolioSeo({
   title: () => project.value!.name,
   description: () => project.value!.tagline,
   ogImage: () => project.value!.hero ?? undefined,
-})
+});
 </script>
 
 <template>
-  <UContainer
-    v-if="project"
-    class="py-16"
-  >
+  <UContainer v-if="project" class="py-16">
     <div class="mx-auto max-w-4xl space-y-12">
       <div>
-        <UButton
-          to="/projects"
-          variant="ghost"
-          color="neutral"
-          class="mb-8"
-        >
+        <UButton to="/projects" variant="ghost" color="neutral" class="mb-8">
           ← All projects
         </UButton>
 
@@ -47,18 +39,13 @@ usePortfolioSeo({
           />
         </div>
 
-        <div
-          class="mb-6 flex h-14 items-center"
-          :class="project.logo.endsWith('.svg') ? 'max-w-[200px]' : 'max-w-[180px]'"
-        >
-          <NuxtImg
-            :src="project.logo"
-            :alt="`${project.name} logo`"
-            class="max-h-12 w-auto object-contain"
-          />
+        <div class="mb-6">
+          <ProjectLogo :project="project" size="detail" />
         </div>
 
-        <div class="mb-4 flex flex-wrap items-center gap-3 text-sm text-neutral-500">
+        <div
+          class="mb-4 flex flex-wrap items-center gap-3 text-sm text-neutral-500"
+        >
           <span
             class="inline-flex items-center gap-2 rounded-full border border-neutral-800 px-3 py-1"
           >
@@ -80,21 +67,19 @@ usePortfolioSeo({
         </p>
       </div>
 
-      <section
-        v-if="galleryImages.length"
-        class="space-y-4"
-      >
-        <h2 class="text-sm font-medium uppercase tracking-widest text-neutral-500">
+      <section v-if="galleryImages.length" class="space-y-4">
+        <h2
+          class="text-sm font-medium uppercase tracking-widest text-neutral-500"
+        >
           Screenshots
         </h2>
-        <ScreenshotGallery
-          :images="galleryImages"
-          :alt-prefix="project.name"
-        />
+        <ScreenshotGallery :images="galleryImages" :alt-prefix="project.name" />
       </section>
 
       <section class="space-y-4">
-        <h2 class="text-sm font-medium uppercase tracking-widest text-neutral-500">
+        <h2
+          class="text-sm font-medium uppercase tracking-widest text-neutral-500"
+        >
           Highlights
         </h2>
         <ul class="space-y-3">
@@ -113,7 +98,9 @@ usePortfolioSeo({
       </section>
 
       <section class="space-y-4">
-        <h2 class="text-sm font-medium uppercase tracking-widest text-neutral-500">
+        <h2
+          class="text-sm font-medium uppercase tracking-widest text-neutral-500"
+        >
           Stack
         </h2>
         <TechStack :items="project.stack" />

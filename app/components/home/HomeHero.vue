@@ -16,7 +16,7 @@ import { siteConfig } from '~/config/site'
         </p>
 
         <div class="space-y-4">
-          <h1 class="text-4xl font-bold tracking-tight text-white sm:text-6xl">
+          <h1 class="text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">
             Hi, I'm {{ siteConfig.name }}.
           </h1>
           <p class="text-xl text-neutral-300 sm:text-2xl">

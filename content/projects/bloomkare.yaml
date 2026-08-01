@@ -2,7 +2,7 @@ slug: bloomkare
 name: Bloomkare
 tagline: Creator–brand campaign platform for inbound seeding marketing
 role: Full-stack developer
-year: "2024–2026"
+year: "2025.12 – 2026.08"
 status: Production
 stack:
   - Nuxt 4
@@ -14,6 +14,7 @@ stack:
   - Amazon SP-API
 brandColor: "#EE5FA4"
 logo: /projects/bloomkare/logo.png
+logoText: /projects/bloomkare/logo-text.svg
 hero: /projects/bloomkare/hero.svg
 screenshots:
   - /projects/bloomkare/campaigns.svg

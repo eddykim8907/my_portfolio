@@ -24,15 +24,8 @@ defineProps<{
     </div>
 
     <div class="flex flex-1 flex-col p-6">
-      <div
-        class="mb-5 flex h-12 items-center"
-        :class="project.logo.endsWith('.svg') ? 'max-w-[160px]' : 'max-w-[140px]'"
-      >
-        <NuxtImg
-          :src="project.logo"
-          :alt="`${project.name} logo`"
-          class="max-h-10 w-auto object-contain"
-        />
+      <div class="mb-5">
+        <ProjectLogo :project="project" size="card" />
       </div>
 
       <div class="mb-3 flex items-center gap-2">
