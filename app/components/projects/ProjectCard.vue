@@ -13,7 +13,7 @@ defineProps<{
     :style="{ '--project-accent': project.brandColor }"
   >
     <div
-      v-if="project.hero"
+      v-if="project.hero && !project.demo"
       class="overflow-hidden border-b border-neutral-800"
     >
       <NuxtImg
@@ -21,6 +21,20 @@ defineProps<{
         :alt="`${project.name} preview`"
         class="aspect-video w-full object-cover object-top transition duration-300 group-hover:scale-[1.02]"
       />
+    </div>
+
+    <div
+      v-else-if="project.demo"
+      class="flex aspect-video items-center justify-center border-b border-neutral-800 bg-[#29AAE1]/10"
+    >
+      <div class="space-y-2 text-center">
+        <p class="text-xs font-medium uppercase tracking-widest text-[#29AAE1]">
+          Interactive preview
+        </p>
+        <p class="text-sm text-neutral-400">
+          Sample data demo
+        </p>
+      </div>
     </div>
 
     <div class="flex flex-1 flex-col p-6">

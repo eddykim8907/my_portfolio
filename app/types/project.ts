@@ -18,6 +18,7 @@ export interface Project {
   brandColor: string;
   logo: string;
   logoText?: string | null;
+  demo?: string | null;
   hero?: string | null;
   screenshots?: string[];
   links?: ProjectLinks;

@@ -10,7 +10,11 @@ if (!project.value) {
   });
 }
 
-const galleryImages = computed(() => project.value?.screenshots ?? []);
+const galleryImages = computed(() =>
+  project.value?.demo ? [] : (project.value?.screenshots ?? []),
+)
+
+const showHero = computed(() => project.value?.hero && !project.value?.demo)
 
 usePortfolioSeo({
   title: () => project.value!.name,
@@ -21,14 +25,17 @@ usePortfolioSeo({
 
 <template>
   <UContainer v-if="project" class="py-16">
-    <div class="mx-auto max-w-4xl space-y-12">
+    <div
+      class="mx-auto space-y-12"
+      :class="project.demo ? 'max-w-5xl' : 'max-w-4xl'"
+    >
       <div>
         <UButton to="/projects" variant="ghost" color="neutral" class="mb-8">
           ← All projects
         </UButton>
 
         <div
-          v-if="project.hero"
+          v-if="showHero"
           class="mb-10 overflow-hidden rounded-xl border border-neutral-800"
         >
           <NuxtImg
@@ -66,6 +73,11 @@ usePortfolioSeo({
           {{ project.tagline }}
         </p>
       </div>
+
+      <ProjectDemo
+        v-if="project.demo"
+        :project="project"
+      />
 
       <section v-if="galleryImages.length" class="space-y-4">
         <h2
