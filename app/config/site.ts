@@ -3,9 +3,12 @@ export interface SiteSkillGroup {
   items: string[]
 }
 
+export type SiteSocialIcon = 'github' | 'linkedin' | 'email'
+
 export interface SiteSocialLink {
   label: string
   href: string
+  icon: SiteSocialIcon
 }
 
 export const siteConfig = {
@@ -37,9 +40,9 @@ export const siteConfig = {
     },
   ] satisfies SiteSkillGroup[],
   social: [
-    { label: 'GitHub', href: 'https://github.com/' },
-    { label: 'LinkedIn', href: 'https://linkedin.com/in/' },
-    { label: 'Email', href: 'mailto:eddykim8907@gmail.com' },
+    { label: 'GitHub', href: 'https://github.com/', icon: 'github' },
+    { label: 'LinkedIn', href: 'https://linkedin.com/in/', icon: 'linkedin' },
+    { label: 'Email', href: 'mailto:eddykim8907@gmail.com', icon: 'email' },
   ] satisfies SiteSocialLink[],
   resume: '/resume.pdf',
 } as const
