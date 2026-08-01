@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { siteConfig } from '~/config/site'
+import { siteConfig } from "~/config/site";
 </script>
 
 <template>
@@ -11,12 +11,16 @@ import { siteConfig } from '~/config/site'
 
     <UContainer class="relative py-24 sm:py-32">
       <div class="mx-auto max-w-3xl space-y-8 text-center">
-        <p class="text-sm font-medium uppercase tracking-widest text-neutral-500">
+        <p
+          class="text-sm font-medium uppercase tracking-widest text-neutral-500"
+        >
           {{ siteConfig.title }}
         </p>
 
         <div class="space-y-4">
-          <h1 class="text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">
+          <h1
+            class="text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl"
+          >
             Hi, I'm {{ siteConfig.name }}.
           </h1>
           <p class="text-xl text-neutral-300 sm:text-2xl">
@@ -29,9 +33,7 @@ import { siteConfig } from '~/config/site'
         </p>
 
         <div class="flex flex-wrap justify-center gap-3 pt-2">
-          <UButton to="/projects" size="lg">
-            View projects
-          </UButton>
+          <UButton to="/projects" size="lg"> View projects </UButton>
           <UButton to="/about" variant="outline" size="lg" color="neutral">
             About me
           </UButton>

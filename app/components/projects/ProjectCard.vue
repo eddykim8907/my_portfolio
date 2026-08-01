@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import type { Project } from '~/types/project'
+import type { Project } from "~/types/project";
 
 defineProps<{
-  project: Project
-}>()
+  project: Project;
+}>();
 </script>
 
 <template>
@@ -33,12 +33,16 @@ defineProps<{
           class="h-2 w-2 rounded-full"
           :style="{ backgroundColor: project.brandColor }"
         />
-        <span class="text-xs font-medium uppercase tracking-wide text-neutral-500">
+        <span
+          class="text-xs font-medium uppercase tracking-wide text-neutral-500"
+        >
           {{ project.status }}
         </span>
       </div>
 
-      <h2 class="mb-2 text-xl font-semibold text-white group-hover:text-[var(--project-accent)]">
+      <h2
+        class="mb-2 text-xl font-semibold text-white group-hover:text-[var(--project-accent)]"
+      >
         {{ project.name }}
       </h2>
 

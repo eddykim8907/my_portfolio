@@ -1,14 +1,16 @@
 <script setup lang="ts">
-const { site } = useSite()
+const { site } = useSite();
 
 const links = [
-  { label: 'Projects', to: '/projects' },
-  { label: 'About', to: '/about' },
-]
+  { label: "Projects", to: "/projects" },
+  { label: "About", to: "/about" },
+];
 </script>
 
 <template>
-  <header class="border-b border-neutral-800">
+  <header
+    class="fixed inset-x-0 top-0 z-40 border-b border-neutral-800/80 bg-neutral-950/85 pt-[env(safe-area-inset-top,0px)] backdrop-blur-md"
+  >
     <UContainer class="flex h-16 items-center justify-between">
       <NuxtLink
         to="/"
