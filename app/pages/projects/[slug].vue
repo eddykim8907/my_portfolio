@@ -10,9 +10,12 @@ if (!project.value) {
   })
 }
 
+const galleryImages = computed(() => project.value?.screenshots ?? [])
+
 useSeoMeta({
   title: () => `${project.value!.name} — Projects`,
   description: () => project.value!.tagline,
+  ogImage: () => project.value!.hero ?? undefined,
 })
 </script>
 
@@ -21,7 +24,7 @@ useSeoMeta({
     v-if="project"
     class="py-16"
   >
-    <div class="mx-auto max-w-3xl space-y-10">
+    <div class="mx-auto max-w-4xl space-y-12">
       <div>
         <UButton
           to="/projects"
@@ -31,6 +34,18 @@ useSeoMeta({
         >
           ← All projects
         </UButton>
+
+        <div
+          v-if="project.hero"
+          class="mb-10 overflow-hidden rounded-xl border border-neutral-800"
+        >
+          <NuxtImg
+            :src="project.hero"
+            :alt="`${project.name} hero screenshot`"
+            class="aspect-video w-full object-cover object-top"
+            priority
+          />
+        </div>
 
         <div
           class="mb-6 flex h-14 items-center"
@@ -65,6 +80,19 @@ useSeoMeta({
         </p>
       </div>
 
+      <section
+        v-if="galleryImages.length"
+        class="space-y-4"
+      >
+        <h2 class="text-sm font-medium uppercase tracking-widest text-neutral-500">
+          Screenshots
+        </h2>
+        <ScreenshotGallery
+          :images="galleryImages"
+          :alt-prefix="project.name"
+        />
+      </section>
+
       <section class="space-y-4">
         <h2 class="text-sm font-medium uppercase tracking-widest text-neutral-500">
           Highlights
@@ -89,17 +117,6 @@ useSeoMeta({
           Stack
         </h2>
         <TechStack :items="project.stack" />
-      </section>
-
-      <section
-        v-if="project.hero"
-        class="overflow-hidden rounded-xl border border-neutral-800"
-      >
-        <NuxtImg
-          :src="project.hero"
-          :alt="`${project.name} screenshot`"
-          class="w-full"
-        />
       </section>
     </div>
   </UContainer>

@@ -72,6 +72,8 @@ public/
 ## Asset guidelines
 
 - **Screenshots:** 1440×900 or 1280×800, WebP preferred. Blur PII, client names, and real revenue figures.
+- **Paths:** Set `hero` and `screenshots` in each YAML file under `public/projects/<slug>/`.
+- **Placeholders:** Branded SVG mocks ship by default. Regenerate with `npm run screenshots:placeholders`, then replace files with real captures (keep the same filenames or update YAML).
 - **Logos:** Copy from source repos into `public/projects/<slug>/`. Do not hotlink from private repos.
 - **OG image:** Place a 1200×630 image at `public/og-image.png` before deploying.
 

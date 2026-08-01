@@ -13,7 +13,10 @@ stack:
   - Pinia
 brandColor: "#29AAE1"
 logo: /projects/compass/logo.svg
-hero: null
+hero: /projects/compass/hero.svg
+screenshots:
+  - /projects/compass/metrics.svg
+  - /projects/compass/logistics.svg
 links:
   live: null
   repo: null

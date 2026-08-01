@@ -14,7 +14,10 @@ stack:
   - Amazon SP-API
 brandColor: "#EE5FA4"
 logo: /projects/bloomkare/logo.png
-hero: null
+hero: /projects/bloomkare/hero.svg
+screenshots:
+  - /projects/bloomkare/campaigns.svg
+  - /projects/bloomkare/admin.svg
 links:
   live: null
   repo: null

@@ -14,7 +14,10 @@ stack:
   - Pinia
 brandColor: "#6366F1"
 logo: /projects/viralhook/logo.svg
-hero: null
+hero: /projects/viralhook/hero.svg
+screenshots:
+  - /projects/viralhook/campaigns.svg
+  - /projects/viralhook/matchmaking.svg
 links:
   live: null
   repo: null

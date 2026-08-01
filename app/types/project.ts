@@ -16,6 +16,7 @@ export interface Project {
   brandColor: string
   logo: string
   hero?: string | null
+  screenshots?: string[]
   links?: ProjectLinks
   highlights: string[]
   featured: boolean
