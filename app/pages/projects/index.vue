@@ -1,9 +1,9 @@
 <script setup lang="ts">
 const { projects } = useProjects()
 
-useSeoMeta({
+usePortfolioSeo({
   title: 'Projects',
-  description: 'Bloomkare, Compass, ForsitHub, and ViralHook.',
+  description: 'Bloomkare, Compass, ForsitHub, and ViralHook — full-stack product work at Forsit.',
 })
 </script>
 

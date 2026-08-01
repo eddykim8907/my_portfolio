@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const { site } = useSite()
 
-useSeoMeta({
+usePortfolioSeo({
   title: 'About',
   description: `About ${site.name} — ${site.title}. ${site.bio}`,
 })

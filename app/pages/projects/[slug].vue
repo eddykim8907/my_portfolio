@@ -12,8 +12,8 @@ if (!project.value) {
 
 const galleryImages = computed(() => project.value?.screenshots ?? [])
 
-useSeoMeta({
-  title: () => `${project.value!.name} — Projects`,
+usePortfolioSeo({
+  title: () => project.value!.name,
   description: () => project.value!.tagline,
   ogImage: () => project.value!.hero ?? undefined,
 })

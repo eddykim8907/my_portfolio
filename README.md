@@ -75,13 +75,14 @@ public/
 - **Paths:** Set `hero` and `screenshots` in each YAML file under `public/projects/<slug>/`.
 - **Placeholders:** Branded SVG mocks ship by default. Regenerate with `npm run screenshots:placeholders`, then replace files with real captures (keep the same filenames or update YAML).
 - **Logos:** Copy from source repos into `public/projects/<slug>/`. Do not hotlink from private repos.
-- **OG image:** Place a 1200×630 image at `public/og-image.png` before deploying.
+- **OG image:** Default at `public/og-image.svg` (regenerate with `npm run assets:brand`). Replace with `public/og-image.png` (1200×630) for best social preview support and update `usePortfolioSeo` default if needed.
+- **Favicon:** `public/favicon.svg` and `public/apple-touch-icon.svg` — regenerate with `npm run assets:brand`.
 
 ## Deployment
 
 Static output via `npm run generate`. Deploy `.output/public` to Vercel, Cloudflare Pages, or Netlify.
 
-Set `NUXT_PUBLIC_SITE_URL` to your production domain (e.g. `https://yourname.dev`).
+Set `NUXT_PUBLIC_SITE_URL` to your production domain (e.g. `https://yourname.dev`). Used for canonical URLs, Open Graph tags, and `sitemap.xml` generation.
 
 ## Site content
 
