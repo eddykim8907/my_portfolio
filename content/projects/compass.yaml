@@ -1,0 +1,26 @@
+slug: compass
+name: Compass
+tagline: Internal Forsit ops console for multi-platform commerce analytics
+role: Full-stack developer
+year: "2024–2026"
+status: Internal
+stack:
+  - Nuxt 3
+  - Vue 3
+  - PrimeVue
+  - AG Grid Enterprise
+  - Tailwind CSS
+  - Pinia
+brandColor: "#29AAE1"
+logo: /projects/compass/logo.svg
+hero: null
+links:
+  live: null
+  repo: null
+highlights:
+  - Amazon, TikTok Shop, Shopify, and Qoo10 item metrics and sales dashboards
+  - Logistics tooling for ocean freight, trucking, warehouse, and demand planning
+  - Product accounts, brand management, campaign postings, and BI embeds
+  - Shared Nuxt monorepo UI layer with Compass-branded PrimeVue preset
+featured: true
+order: 2

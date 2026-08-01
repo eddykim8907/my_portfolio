@@ -1,0 +1,27 @@
+slug: viralhook
+name: ViralHook
+tagline: Creator pipeline platform from matchmaking through delivery and payment
+role: Full-stack developer
+year: "2025–2026"
+status: Production
+stack:
+  - Nuxt 4
+  - Vue 3
+  - Supabase
+  - PrimeVue
+  - Tailwind CSS
+  - AG Grid Enterprise
+  - Pinia
+brandColor: "#6366F1"
+logo: /projects/viralhook/logo.svg
+hero: null
+links:
+  live: null
+  repo: null
+highlights:
+  - Candidate pool through creator activation and paid campaign workflows
+  - Matchmaking, dealmaking, partner pairing, and delivery tracking
+  - Multi-platform creator support across TikTok, YouTube, and Instagram
+  - Server-side data layer with Supabase and enterprise grid-heavy admin UI
+featured: true
+order: 4

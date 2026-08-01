@@ -1,0 +1,27 @@
+slug: bloomkare
+name: Bloomkare
+tagline: Creator–brand campaign platform for inbound seeding marketing
+role: Full-stack developer
+year: "2024–2026"
+status: Production
+stack:
+  - Nuxt 4
+  - Vue 3
+  - Supabase
+  - PrimeVue
+  - Tailwind CSS
+  - ShipStation
+  - Amazon SP-API
+brandColor: "#EE5FA4"
+logo: /projects/bloomkare/logo.png
+hero: null
+links:
+  live: null
+  repo: null
+highlights:
+  - Creator campaign discovery, applications, and TikTok OAuth with analytics sync
+  - Admin ops for applications, shipments, rewards, and gamification
+  - Amazon SP-API and ShipStation integrations for brand fulfillment workflows
+  - Public marketing site with creator and agency onboarding flows
+featured: true
+order: 1

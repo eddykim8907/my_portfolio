@@ -1,0 +1,27 @@
+slug: forsit-hub
+name: ForsitHub
+tagline: Client-facing brand portal and multi-platform sales dashboard
+role: Full-stack developer
+year: "2024–2026"
+status: Internal
+stack:
+  - Nuxt 3
+  - Vue 3
+  - PrimeVue
+  - Nitro
+  - MySQL
+  - Knex
+  - nuxt-auth-utils
+brandColor: "#10B981"
+logo: /projects/forsit-hub/logo.svg
+hero: null
+links:
+  live: null
+  repo: null
+highlights:
+  - Brand-facing dashboards for Amazon US/JP, Qoo10, and TikTok performance
+  - Amazon and TikTok metrics, PPC views, items, and parent-SKU rollups
+  - Plan confirmation workflow that feeds operational data back into Compass
+  - White-label client headers and authenticated portal experience
+featured: true
+order: 3

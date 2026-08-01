@@ -1,24 +1,106 @@
 <script setup lang="ts">
 const route = useRoute()
 const slug = computed(() => route.params.slug as string)
+const { project } = useProject(slug)
+
+if (!project.value) {
+  throw createError({
+    statusCode: 404,
+    statusMessage: 'Project not found',
+  })
+}
 
 useSeoMeta({
-  title: () => `${slug.value} — Projects`,
+  title: () => `${project.value!.name} — Projects`,
+  description: () => project.value!.tagline,
 })
 </script>
 
 <template>
-  <UContainer class="py-16">
-    <div class="mx-auto max-w-3xl space-y-4 text-center">
-      <h1 class="text-3xl font-bold capitalize text-white">
-        {{ slug }}
-      </h1>
-      <p class="text-neutral-400">
-        Case study page — content coming in Phase 2.
-      </p>
-      <UButton to="/projects" variant="ghost" color="neutral">
-        Back to projects
-      </UButton>
+  <UContainer
+    v-if="project"
+    class="py-16"
+  >
+    <div class="mx-auto max-w-3xl space-y-10">
+      <div>
+        <UButton
+          to="/projects"
+          variant="ghost"
+          color="neutral"
+          class="mb-8"
+        >
+          ← All projects
+        </UButton>
+
+        <div
+          class="mb-6 flex h-14 items-center"
+          :class="project.logo.endsWith('.svg') ? 'max-w-[200px]' : 'max-w-[180px]'"
+        >
+          <NuxtImg
+            :src="project.logo"
+            :alt="`${project.name} logo`"
+            class="max-h-12 w-auto object-contain"
+          />
+        </div>
+
+        <div class="mb-4 flex flex-wrap items-center gap-3 text-sm text-neutral-500">
+          <span
+            class="inline-flex items-center gap-2 rounded-full border border-neutral-800 px-3 py-1"
+          >
+            <span
+              class="h-2 w-2 rounded-full"
+              :style="{ backgroundColor: project.brandColor }"
+            />
+            {{ project.status }}
+          </span>
+          <span>{{ project.year }}</span>
+          <span>{{ project.role }}</span>
+        </div>
+
+        <h1 class="text-3xl font-bold text-white sm:text-4xl">
+          {{ project.name }}
+        </h1>
+        <p class="mt-4 text-lg text-neutral-400">
+          {{ project.tagline }}
+        </p>
+      </div>
+
+      <section class="space-y-4">
+        <h2 class="text-sm font-medium uppercase tracking-widest text-neutral-500">
+          Highlights
+        </h2>
+        <ul class="space-y-3">
+          <li
+            v-for="highlight in project.highlights"
+            :key="highlight"
+            class="flex gap-3 text-neutral-300"
+          >
+            <span
+              class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full"
+              :style="{ backgroundColor: project.brandColor }"
+            />
+            <span>{{ highlight }}</span>
+          </li>
+        </ul>
+      </section>
+
+      <section class="space-y-4">
+        <h2 class="text-sm font-medium uppercase tracking-widest text-neutral-500">
+          Stack
+        </h2>
+        <TechStack :items="project.stack" />
+      </section>
+
+      <section
+        v-if="project.hero"
+        class="overflow-hidden rounded-xl border border-neutral-800"
+      >
+        <NuxtImg
+          :src="project.hero"
+          :alt="`${project.name} screenshot`"
+          class="w-full"
+        />
+      </section>
     </div>
   </UContainer>
 </template>

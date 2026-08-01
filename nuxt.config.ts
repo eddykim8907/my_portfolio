@@ -1,9 +1,21 @@
+import { fileURLToPath } from 'node:url'
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  alias: {
+    '@content': fileURLToPath(new URL('./content', import.meta.url)),
+  },
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
 
   modules: ['@nuxt/ui', '@nuxt/image'],
+
+  components: [
+    {
+      path: '~/components',
+      pathPrefix: false,
+    },
+  ],
 
   site: {
     url: process.env.NUXT_PUBLIC_SITE_URL || 'http://localhost:3000',
@@ -32,6 +44,14 @@ export default defineNuxtConfig({
 
   nitro: {
     preset: 'static',
+    prerender: {
+      routes: [
+        '/projects/bloomkare',
+        '/projects/compass',
+        '/projects/forsit-hub',
+        '/projects/viralhook',
+      ],
+    },
   },
 
   image: {
