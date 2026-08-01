@@ -3,7 +3,9 @@ name: ViralHook
 tagline: Creator pipeline platform from matchmaking through delivery and payment
 role: Frontend developer
 year: "2025.08 – 2025.12"
-status: Production
+startDate: "2025-08"
+endDate: "2025-12"
+status: Internal
 stack:
   - Nuxt 4
   - Vue 3

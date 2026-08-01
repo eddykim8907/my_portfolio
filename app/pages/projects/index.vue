@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const { projects } = useProjects()
+const { projectsByOrder } = useProjects()
 
 usePortfolioSeo({
   title: 'Projects',
@@ -23,7 +23,7 @@ usePortfolioSeo({
         </p>
       </div>
 
-      <ProjectGrid :projects="projects" />
+      <ProjectGrid :projects="projectsByOrder" />
     </div>
   </UContainer>
 </template>

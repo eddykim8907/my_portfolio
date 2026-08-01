@@ -3,6 +3,8 @@ name: ForsitHub
 tagline: Client-facing brand portal and multi-platform sales dashboard
 role: Frontend developer
 year: "2025.05 – 2025.11"
+startDate: "2025-05"
+endDate: "2025-11"
 status: Internal
 stack:
   - Nuxt 3

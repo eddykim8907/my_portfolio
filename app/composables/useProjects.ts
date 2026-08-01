@@ -2,13 +2,16 @@ import {
   getFeaturedProjects,
   getProjectBySlug,
   getProjects,
+  getProjectsByOrder,
 } from '~/utils/projects'
 
 export function useProjects() {
   const projects = useState('projects', () => getProjects())
+  const projectsByOrder = useState('projects-by-order', () => getProjectsByOrder())
 
   return {
     projects: readonly(projects),
+    projectsByOrder: readonly(projectsByOrder),
     featuredProjects: computed(() => getFeaturedProjects()),
   }
 }

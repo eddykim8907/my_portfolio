@@ -11,6 +11,8 @@ export interface Project {
   tagline: string;
   role: string;
   year: string;
+  startDate: string;
+  endDate: string;
   status: ProjectStatus;
   stack: string[];
   brandColor: string;
