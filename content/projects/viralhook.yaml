@@ -23,10 +23,11 @@ screenshots: []
 links:
   live: null
   repo: null
-highlights:
-  - Candidate pool through creator activation and paid campaign workflows
-  - Matchmaking, dealmaking, partner pairing, and delivery tracking
-  - Multi-platform creator support across TikTok, YouTube, and Instagram
-  - Server-side data layer with Supabase and enterprise grid-heavy admin UI
+context: >
+  Internal paid-creator pipeline from matchmaking through pairing and delivery —
+  shaped around how ops teams actually work.
+contribution:
+  - After promotion, owned frontend end-to-end — building the app from the ground up while contributing to early product direction
+  - Worked directly with end users to gather requirements, map workflows and pain points, and turn those into practical features
 featured: true
 order: 4

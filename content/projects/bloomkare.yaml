@@ -17,17 +17,18 @@ stack:
 brandColor: "#EE5FA4"
 logo: /projects/bloomkare/logo.png
 logoText: /projects/bloomkare/logo-text.svg
-hero: /projects/bloomkare/hero.svg
-screenshots:
-  - /projects/bloomkare/campaigns.svg
-  - /projects/bloomkare/admin.svg
+demo: bloomkare-admin
+hero: null
+screenshots: []
 links:
   live: null
   repo: null
-highlights:
-  - Creator campaign discovery, applications, and TikTok OAuth with analytics sync
-  - Admin ops for applications, shipments, rewards, and gamification
-  - Amazon SP-API and ShipStation integrations for brand fulfillment workflows
-  - Public marketing site with creator and agency onboarding flows
+context: >
+  Production seeding platform spanning an internal campaign ERP and a creator-facing
+  product for applications, fulfillment, and submissions.
+contribution:
+  - "Owned the product end-to-end — planning and architecture through build and deployment — across frontend and backend"
+  - "Stood up CI/CD, deployment, logging, and monitoring, and wired external APIs (TikTok, Google) plus Forsit’s internal systems"
+  - "Designed and shipped two surfaces — an internal ops dashboard and a creator platform for applications, gamification, and video submissions"
 featured: true
 order: 1

@@ -22,10 +22,11 @@ screenshots: []
 links:
   live: null
   repo: null
-highlights:
-  - Brand-facing dashboards for Amazon US/JP, Qoo10, and TikTok performance
-  - Amazon and TikTok metrics, PPC views, items, and parent-SKU rollups
-  - Plan confirmation workflow that feeds operational data back into Compass
-  - White-label client headers and authenticated portal experience
+context: >
+  Authenticated brand portal for multi-platform sales and product performance —
+  a cleaner client experience than raw internal ops tools.
+contribution:
+  - Modernized the frontend into a modular system of reusable components, layouts, and templates for a clean client experience
+  - Designed and built KPI dashboards — choosing which metrics to surface and how to present them so brands can understand product performance at a glance
 featured: true
 order: 3

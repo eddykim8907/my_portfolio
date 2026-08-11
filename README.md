@@ -91,7 +91,7 @@ Edit `app/config/site.ts` for personal copy used across the home page, about pag
 - `name`, `title`, `bio`, `location`
 - `about.paragraphs` — longer bio on `/about`
 - `skills` — grouped skill lists
-- `social` — GitHub, LinkedIn, email links (footer + about contact)
+- `social` — GitHub and email links (footer + about contact)
 - `resume` — path to PDF in `public/` (add `public/resume.pdf` when ready)
 
 ## License

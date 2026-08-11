@@ -10,7 +10,28 @@ const yamlModules = import.meta.glob<string>('@content/projects/*.yaml', {
 })
 
 function loadProjects(): Project[] {
-  return Object.values(yamlModules).map((raw) => parse(raw) as Project)
+  return Object.values(yamlModules).map((raw) => {
+    const project = parse(raw) as Project
+
+    if (project.contribution?.length) {
+      project.contribution = project.contribution.map((item) => {
+        if (typeof item === 'string') {
+          return item
+        }
+
+        // Unquoted YAML `key: value` list items parse as objects — flatten them.
+        if (item && typeof item === 'object') {
+          return Object.entries(item as Record<string, string>)
+            .map(([key, value]) => `${key}: ${value}`)
+            .join(' ')
+        }
+
+        return String(item)
+      })
+    }
+
+    return project
+  })
 }
 
 export function getProjectsByOrder(): Project[] {

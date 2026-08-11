@@ -14,15 +14,15 @@ export interface SiteSocialLink {
 export const siteConfig = {
   name: 'Edward Kim',
   title: 'Full-stack & frontend developer',
-  tagline: 'Full-stack product work',
-  bio: 'Building creator platforms, brand portals, and internal ops tools at Forsit — with Nuxt, Vue, and Supabase.',
+  tagline: '~3 years building product web apps',
+  bio: 'From creator campaign platforms to internal ops consoles and brand portals — starting in frontend, now focused on fullstack.',
   email: 'eddykim8907@gmail.com',
   location: 'Seoul, KR',
   about: {
     paragraphs: [
-      "I'm a developer focused on Nuxt and Vue applications — from creator-facing campaign platforms to internal ops consoles and client brand portals.",
-      'At Forsit, I contributed across Bloomkare (full-stack), Compass, ForsitHub, and ViralHook (frontend): shipping features from Supabase schema and Nitro APIs to PrimeVue dashboards and data-heavy admin UI.',
-      "I'm especially interested in well-structured product codebases, static-friendly Nuxt apps, and tools that help brands and creators work together at scale.",
+      '안녕하세요! I\'m a software developer with about three years of experience building web applications — from creator-facing campaign platforms to internal ops consoles and portals for brand clients. I started as a frontend developer; as AI accelerated how I learn and ship, I shifted more of my focus toward fullstack work.',
+      'Regardless of whether AI is part of the process, I aim to start every project well-documented, scalable, and modular.',
+      'I enjoy collaborating with a team to solve problems, and I\'m equally comfortable working independently — including taking full ownership of tasks and projects end to end.',
     ],
   },
   skills: [
@@ -40,8 +40,7 @@ export const siteConfig = {
     },
   ] satisfies SiteSkillGroup[],
   social: [
-    { label: 'GitHub', href: 'https://github.com/', icon: 'github' },
-    { label: 'LinkedIn', href: 'https://linkedin.com/in/', icon: 'linkedin' },
+    { label: 'GitHub', href: 'https://github.com/edwardkim088', icon: 'github' },
     { label: 'Email', href: 'mailto:eddykim8907@gmail.com', icon: 'email' },
   ] satisfies SiteSocialLink[],
   resume: '/resume.pdf',

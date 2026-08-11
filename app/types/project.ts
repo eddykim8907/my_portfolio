@@ -18,11 +18,14 @@ export interface Project {
   brandColor: string;
   logo: string;
   logoText?: string | null;
+  /** Short problem / product context shown above the demo */
+  context?: string | null;
+  /** Concrete ownership bullets — what you personally built */
+  contribution?: string[];
   demo?: string | null;
   hero?: string | null;
   screenshots?: string[];
   links?: ProjectLinks;
-  highlights: string[];
   featured: boolean;
   order: number;
 }

@@ -21,10 +21,12 @@ screenshots: []
 links:
   live: null
   repo: null
-highlights:
-  - Amazon, TikTok Shop, Shopify, and Qoo10 item metrics and sales dashboards
-  - Logistics tooling for ocean freight, trucking, warehouse, and demand planning
-  - Product accounts, brand management, campaign postings, and BI embeds
-  - Shared Nuxt monorepo UI layer with Compass-branded PrimeVue preset
+context: >
+  Internal ops console for multi-platform commerce analytics — rebuilt on a clearer
+  frontend system so dense metrics views could scale cleanly.
+contribution:
+  - Refactored the legacy frontend with a system-first approach — reusable modules, templates, layouts, and composables
+  - Prioritized clearer UX and data visualization so internal users could scan metrics and act without friction
+  - Used those shared systems to maintain existing features while landing new functionality on top of them
 featured: true
 order: 2

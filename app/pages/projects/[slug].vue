@@ -26,7 +26,7 @@ usePortfolioSeo({
 <template>
   <UContainer v-if="project" class="py-16">
     <div
-      class="mx-auto space-y-12"
+      class="mx-auto space-y-10"
       :class="project.demo ? 'max-w-5xl' : 'max-w-4xl'"
     >
       <div>
@@ -72,6 +72,15 @@ usePortfolioSeo({
         <p class="mt-4 text-lg text-neutral-400">
           {{ project.tagline }}
         </p>
+        <p
+          v-if="project.context"
+          class="mt-4 max-w-3xl text-base leading-relaxed text-neutral-500"
+        >
+          {{ project.context }}
+        </p>
+        <div class="mt-5">
+          <TechStack :items="project.stack" />
+        </div>
       </div>
 
       <ProjectDemo
@@ -88,34 +97,26 @@ usePortfolioSeo({
         <ScreenshotGallery :images="galleryImages" :alt-prefix="project.name" />
       </section>
 
-      <section class="space-y-4">
-        <h2
-          class="text-sm font-medium uppercase tracking-widest text-neutral-500"
-        >
-          Highlights
+      <section
+        v-if="project.contribution?.length"
+        class="space-y-4"
+      >
+        <h2 class="text-sm font-medium uppercase tracking-widest text-neutral-500">
+          My contribution
         </h2>
         <ul class="space-y-3">
           <li
-            v-for="highlight in project.highlights"
-            :key="highlight"
+            v-for="item in project.contribution"
+            :key="item"
             class="flex gap-3 text-neutral-300"
           >
             <span
               class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full"
               :style="{ backgroundColor: project.brandColor }"
             />
-            <span>{{ highlight }}</span>
+            <span>{{ item }}</span>
           </li>
         </ul>
-      </section>
-
-      <section class="space-y-4">
-        <h2
-          class="text-sm font-medium uppercase tracking-widest text-neutral-500"
-        >
-          Stack
-        </h2>
-        <TechStack :items="project.stack" />
       </section>
     </div>
   </UContainer>
