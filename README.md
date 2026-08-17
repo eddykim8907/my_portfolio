@@ -80,9 +80,21 @@ public/
 
 ## Deployment
 
-Static output via `npm run generate`. Deploy `.output/public` to Vercel, Cloudflare Pages, or Netlify.
+The site is generated statically (`npm run generate`). On Vercel that is configured in `vercel.json` (`outputDirectory`: `.output/public`).
 
-Set `NUXT_PUBLIC_SITE_URL` to your production domain (e.g. `https://yourname.dev`). Used for canonical URLs, Open Graph tags, and `sitemap.xml` generation.
+**Deploy (CLI)**
+
+```bash
+npx vercel login
+npx vercel --yes          # preview
+npx vercel --prod --yes   # production
+```
+
+**Deploy (Git)**
+
+Import [eddykim8907/my_portfolio](https://github.com/eddykim8907/my_portfolio) at [vercel.com/new](https://vercel.com/new). Production deploys from `main`.
+
+Set `NUXT_PUBLIC_SITE_URL` to your production domain (e.g. `https://yourname.dev`) in Vercel → Project → Settings → Environment Variables. Until then, Vercel’s production URL is used for canonical URLs, Open Graph tags, and `sitemap.xml`.
 
 ## Site content
 
