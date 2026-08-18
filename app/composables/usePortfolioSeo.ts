@@ -36,8 +36,8 @@ export function usePortfolioSeo(options: PortfolioSeoOptions = {}) {
 
   const fullTitle = computed(() =>
     pageTitle.value === siteConfig.name
-      ? `${siteConfig.name} — ${siteConfig.title}`
-      : `${pageTitle.value} — ${siteConfig.name}`,
+      ? `${siteConfig.name} | ${siteConfig.title}`
+      : `${pageTitle.value} | ${siteConfig.name}`,
   )
 
   useSeoMeta({

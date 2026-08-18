@@ -74,14 +74,6 @@ function isActive(path: string) {
           </NuxtLink>
         </nav>
 
-        <a
-          :href="site.resume"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="hidden rounded-lg bg-gradient-to-r from-[#29AAE1] to-[#6366F1] px-3.5 py-1.5 text-sm font-medium text-white shadow-md shadow-[#29AAE1]/15 transition duration-200 hover:brightness-110 sm:inline-flex"
-        >
-          Resume
-        </a>
       </div>
     </UContainer>
   </header>

@@ -1,0 +1,36 @@
+slug: gs-land-promotional-website
+name: Promotional Website
+tagline: Launched promotional homepage for a large construction company
+role: Frontend Developer Associate
+year: "2024.08 - 2024.12"
+startDate: "2024-08"
+endDate: "2024-12"
+status: Production
+stack:
+  - HTML
+  - CSS
+  - JavaScript (Vanilla)
+  - PHP
+  - CodeIgniter4
+  - SwiperJS
+  - GSAP
+brandColor: "#F59E0B"
+logo: /projects/gs-land/logo.svg
+demo: null
+hero: null
+screenshots: []
+links:
+  live: http://hpenc.com/
+  repo: null
+context: >
+  Promotional web launch requested by a construction client. Following client
+  direction, I benchmarked Samsung C&T's website, then translated those findings
+  into a custom homepage design and frontend build.
+contribution:
+  - Benchmarked Samsung C&T's website and used the analysis as a practical reference for structure and visual direction.
+  - Designed and implemented the homepage frontend using HTML, CSS, and Vanilla JavaScript.
+  - Integrated PHP and CodeIgniter4 within the project delivery flow.
+  - Built interactive sections with SwiperJS and motion effects with GSAP for promotional storytelling.
+  - Delivered responsive behavior and polished UI details for public launch as a Frontend Developer Associate.
+featured: true
+order: -2

@@ -3,7 +3,7 @@ const { site } = useSite()
 
 usePortfolioSeo({
   title: 'About',
-  description: `About ${site.name} — ${site.title}. ${site.bio}`,
+  description: `About ${site.name} - ${site.title}. ${site.bio}`,
 })
 </script>
 
@@ -37,14 +37,6 @@ usePortfolioSeo({
       <AboutSkills />
 
       <section class="flex flex-wrap gap-3 border-t border-neutral-800 pt-10">
-        <UButton
-          :href="site.resume"
-          target="_blank"
-          rel="noopener noreferrer"
-          size="lg"
-        >
-          Download resume
-        </UButton>
         <UButton
           to="/projects"
           variant="outline"

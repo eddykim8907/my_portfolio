@@ -81,6 +81,31 @@ usePortfolioSeo({
         <div class="mt-5">
           <TechStack :items="project.stack" />
         </div>
+        <div
+          v-if="project.links?.live || project.links?.repo"
+          class="mt-6 flex flex-wrap gap-3"
+        >
+          <UButton
+            v-if="project.links?.live"
+            :href="project.links.live"
+            target="_blank"
+            rel="noopener noreferrer"
+            size="sm"
+          >
+            Visit live site
+          </UButton>
+          <UButton
+            v-if="project.links?.repo"
+            :href="project.links.repo"
+            target="_blank"
+            rel="noopener noreferrer"
+            variant="outline"
+            color="neutral"
+            size="sm"
+          >
+            View repository
+          </UButton>
+        </div>
       </div>
 
       <ProjectDemo

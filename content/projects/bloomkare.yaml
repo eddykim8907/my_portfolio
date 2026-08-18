@@ -21,7 +21,7 @@ demo: bloomkare-admin
 hero: null
 screenshots: []
 links:
-  live: null
+  live: https://www.bloomkare.com
   repo: null
 context: >
   Production seeding platform spanning an internal campaign ERP and a creator-facing

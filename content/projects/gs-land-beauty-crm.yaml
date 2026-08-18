@@ -1,0 +1,32 @@
+slug: gs-land-beauty-crm
+name: Beauty Shop CRM
+tagline: Launched CRM dashboard for beauty shop operations
+role: Frontend Developer Associate
+year: "2025.01 - 2025.05"
+startDate: "2025-01"
+endDate: "2025-05"
+status: Production
+stack:
+  - React
+  - Tailwind CSS
+  - TanStack
+brandColor: "#F59E0B"
+logo: /projects/gs-land/logo.svg
+demo: null
+hero: null
+screenshots: []
+links:
+  live: null
+  repo: null
+context: >
+  CRM project for beauty salons focused on day-to-day operations and visibility.
+  The dashboard supports employee management, customer reservations, sales and
+  revenue tracking, and overall shop data monitoring.
+contribution:
+  - Built dashboard frontend features in React with Tailwind CSS as a Frontend Developer Associate.
+  - Implemented management screens for employees, reservations, and customer operations.
+  - Built sales and revenue views so shop owners can monitor performance trends.
+  - Structured reusable data-table and dashboard patterns using TanStack-based tooling.
+  - Delivered a practical CRM UI tailored to real salon workflows.
+featured: true
+order: -1

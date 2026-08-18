@@ -1,0 +1,31 @@
+slug: gs-land-shopping-platform
+name: Online Shopping Platform
+tagline: Launched online shopping platform for a small B2C web shopping mall
+role: Frontend Developer Associate
+year: "2023.06 - 2024.07"
+startDate: "2023-06"
+endDate: "2024-07"
+status: Production
+stack:
+  - HTML
+  - CSS
+  - JavaScript (Vanilla)
+brandColor: "#F59E0B"
+logo: /projects/gs-land/logo.svg
+demo: null
+hero: null
+screenshots: []
+links:
+  live: null
+  repo: null
+context: >
+  First GS Land launch project focused on shipping a complete small B2C shopping
+  mall experience. I handled UI design direction and frontend implementation for
+  the customer-facing shopping flow.
+contribution:
+  - Led UI design for key storefront screens, balancing simple structure and purchase-focused flow.
+  - Built the frontend application using HTML, CSS, and Vanilla JavaScript.
+  - Implemented core shopping experiences for launch, including browse and purchase-related interactions.
+  - Supported production launch readiness across the full frontend scope as a Frontend Developer Associate.
+featured: true
+order: -3

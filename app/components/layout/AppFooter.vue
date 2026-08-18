@@ -21,10 +21,6 @@ const year = new Date().getFullYear()
         >
           {{ link.label }}
         </a>
-        <span class="hidden text-neutral-700 sm:inline">·</span>
-        <p class="text-neutral-600">
-          Built with Nuxt
-        </p>
       </div>
     </UContainer>
   </footer>

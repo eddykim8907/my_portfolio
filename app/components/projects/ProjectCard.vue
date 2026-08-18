@@ -13,6 +13,7 @@ defineProps<{
     :style="{ '--project-accent': project.brandColor }"
   >
     <div
+      v-if="project.demo || project.hero || project.logoText"
       class="flex h-24 items-center justify-center border-b border-neutral-800 px-4 sm:h-28"
       :style="{
         background: `linear-gradient(145deg, color-mix(in srgb, ${project.brandColor} 22%, transparent) 0%, transparent 55%)`,
