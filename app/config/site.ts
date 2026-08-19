@@ -13,9 +13,9 @@ export interface SiteSocialLink {
 
 export const siteConfig = {
   name: "Edward Kim",
-  title: "Web Developer",
-  tagline: "~4 years building product web apps",
-  bio: "Software developer based in Gangnam with about four years of experience, from creator campaign platforms to internal ops consoles and brand portals.",
+  title: "Full-stack Web Developer",
+  tagline: "",
+  bio: "I'm a software developer based in Gangnam with experience building small internal ops dashboards to full-scale production-ready web applications.",
   email: "eddykim8907@gmail.com",
   location: "Gangnam, Seoul, KR",
   about: {
