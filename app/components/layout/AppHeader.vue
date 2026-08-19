@@ -30,7 +30,7 @@ function isActive(path: string) {
       <NuxtLink
         to="/"
         class="group flex min-w-0 items-center gap-3"
-        aria-label="Home — Edward Kim portfolio"
+        aria-label="Edward Kim portfolio home"
       >
         <span
           class="h-7 w-1 shrink-0 rounded-full bg-gradient-to-b from-[#EE5FA4] via-[#29AAE1] to-[#6366F1] transition duration-200 group-hover:brightness-110"

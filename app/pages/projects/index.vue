@@ -9,7 +9,7 @@ const forsitProjects = computed(() =>
 
 usePortfolioSeo({
   title: 'Projects',
-  description: 'GS Land and Forsit projects: web products from B2C launches to internal ops and creator platforms.',
+  description: 'GS Land and Forsit projects: B2C sites, internal tools, brand portals, and creator platforms.',
 })
 </script>
 
@@ -24,20 +24,30 @@ usePortfolioSeo({
           Projects
         </h1>
         <p class="text-neutral-400">
-          Seven projects across GS Land and Forsit, from B2C web launches to internal
-          tools, brand portals, and creator platforms.
+          Seven projects at GS Land and Forsit: B2C sites, internal tools,
+          brand portals, and creator platforms.
         </p>
       </div>
 
       <section class="space-y-4">
-        <h2 class="text-sm font-medium uppercase tracking-widest text-neutral-500">
+        <h2 class="flex items-center gap-2.5 text-sm font-medium uppercase tracking-widest text-neutral-500">
+          <img
+            src="/projects/gs-land/logo.svg"
+            alt=""
+            class="h-7 w-7 shrink-0 rounded-md object-contain"
+          >
           GS Land
         </h2>
         <ProjectGrid :projects="gsLandProjects" />
       </section>
 
       <section class="space-y-4">
-        <h2 class="text-sm font-medium uppercase tracking-widest text-neutral-500">
+        <h2 class="flex items-center gap-2.5 text-sm font-medium uppercase tracking-widest text-neutral-500">
+          <img
+            src="/projects/forsit/forsit-logo.png"
+            alt=""
+            class="h-7 w-7 shrink-0 rounded-md object-contain"
+          >
           Forsit
         </h2>
         <ProjectGrid :projects="forsitProjects" />

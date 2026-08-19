@@ -45,12 +45,11 @@ links:
   repo: null
 context: >
   Authenticated brand portal for multi-platform sales and product performance.
-  The work included deciding which metrics to surface and how to present them,
-  not only implementing the dashboards.
+  Part of the job was choosing which metrics to show and how to present them.
 contribution:
-  - Modernized the frontend around reusable components, layouts, and templates, replacing duplicated and hardcoded implementations
-  - Designed and implemented KPI and data aggregation dashboards used by brand clients to understand product performance
-  - Determined which metrics were most useful to surface and designed their presentation so complex performance data was easier to interpret
-  - Implemented new functionality and maintained existing features using the reusable frontend systems introduced during the modernization
+  - Replaced duplicated, hardcoded UI with reusable components, layouts, and templates
+  - Designed and built KPI dashboards that brand clients use to track product performance
+  - Chose which metrics to show and designed the layout so performance data was easier to read
+  - Added new features and kept existing ones working on top of that shared frontend system
 featured: true
 order: 3

@@ -1,6 +1,6 @@
 slug: bloomkare
 name: Bloomkare
-tagline: Creator–brand campaign platform for inbound seeding marketing
+tagline: Creator-brand campaign platform for inbound seeding marketing
 role: Sole Full-Stack Developer
 year: "2025.12 – 2026.08"
 startDate: "2025-12"
@@ -52,34 +52,33 @@ links:
   repo: null
 highlight: Thousands of registered accounts · Hundreds of daily active users
 context: >
-  Production seeding platform spanning an internal campaign ERP and a creator-facing
-  product. Replaced a spreadsheet-driven campaign workflow with an automated system
-  used by thousands of registered accounts and hundreds of daily active users.
+  A production seeding platform with an internal campaign ERP and a creator-facing
+  product. It replaced a spreadsheet-heavy campaign workflow and now has thousands
+  of registered accounts and hundreds of daily active users.
 contributionGroups:
   - title: Ownership
     items:
-      - Sole developer responsible for taking the product from planning and architecture through full-stack development, deployment, and ongoing production maintenance
-      - Designed and built both the internal campaign-management ERP and the creator-facing product — covering applications, gamification, fulfillment, and video submissions — from the ground up
-      - Worked closely with the UX/UI designer and project manager to translate product requirements and integration plans into production systems
+      - Sole developer from planning and architecture through full-stack development, deployment, and production maintenance
+      - Designed and built the internal campaign-management ERP and the creator-facing product, including applications, gamification, fulfillment, and video submissions
+      - Worked with the UX/UI designer and project manager to turn product requirements and integration plans into production systems
   - title: Campaign automation
     items:
-      - Replaced a largely spreadsheet-driven creator seeding workflow with an integrated campaign management platform
+      - Replaced a mostly spreadsheet-based creator seeding workflow with a campaign management platform
       - Automated campaign applications, creator evaluation, fulfillment tracking, submission deadlines, and campaign reporting
-      - Built creator scoring and evaluation logic that automatically accepted or rejected applicants based on defined criteria, reducing the need for manual profile-by-profile review
+      - Built creator scoring that auto-accepted or rejected applicants against set criteria, so ops did not have to review every profile by hand
   - title: Integrations & backend
     items:
       - Integrated TikTok APIs and access-token workflows to collect creator and content data and automate campaign fulfillment checks
-      - Integrated EasyPost and ShipStation webhooks to automatically synchronize shipment status, plus Amazon SP-API for product-related campaign operations
-      - Wired Google APIs and Forsit's internal systems into the campaign workflow
-      - Implemented scheduled jobs for automated deadline enforcement, campaign processing, and result updates
+      - Integrated EasyPost and ShipStation webhooks to keep shipment status in sync, plus Amazon SP-API for product-related campaign work
+      - Connected Google APIs and Forsit's internal systems into the campaign workflow
+      - Implemented scheduled jobs for deadline enforcement, campaign processing, and result updates
   - title: Infrastructure
     items:
-      - Implemented authentication and authorization, backend data flows, third-party integrations, and production infrastructure
-      - Set up CI/CD, Coolify deployment, logging, and monitoring and maintained the application in production
+      - Handled auth, backend data flows, third-party integrations, and production infrastructure
+      - Set up CI/CD, Coolify deployment, logging, and monitoring, and kept the app running in production
 impact: >
   The platform grew to thousands of registered accounts and hundreds of daily
-  active users, replacing a manual process that previously required spreadsheet
-  maintenance, creator data entry, TikTok research, fulfillment tracking, video
-  verification, and reporting.
+  active users. Before that, the same work lived in spreadsheets: creator research,
+  data entry, fulfillment tracking, video checks, and reporting.
 featured: true
 order: 1

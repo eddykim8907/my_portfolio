@@ -3,7 +3,7 @@ const { site } = useSite()
 
 usePortfolioSeo({
   title: site.name,
-  description: `${site.bio} Projects across GS Land and Forsit, from B2C launches to full-stack product systems.`,
+  description: `${site.bio} Projects at GS Land and Forsit, including B2C launches and full-stack product work.`,
 })
 </script>
 

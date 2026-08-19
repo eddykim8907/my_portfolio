@@ -177,7 +177,7 @@ function subtitle(item: BloomkareQueueItem) {
           </template>
 
           <p class="text-xs leading-relaxed text-neutral-400">
-            Sample admin Operations data — not connected to production Bloomkare.
+            Sample admin Operations data. Not connected to production Bloomkare.
           </p>
         </div>
       </DemoScrollArea>

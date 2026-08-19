@@ -23,10 +23,10 @@ context: >
   The dashboard supports employee management, customer reservations, sales and
   revenue tracking, and overall shop data monitoring.
 contribution:
-  - Built dashboard frontend features in React with Tailwind CSS as a Frontend Developer Associate.
+  - Built dashboard frontend features in React with Tailwind CSS.
   - Implemented management screens for employees, reservations, and customer operations.
   - Built sales and revenue views so shop owners can monitor performance trends.
-  - Structured reusable data-table and dashboard patterns using TanStack-based tooling.
-  - Delivered a practical CRM UI tailored to real salon workflows.
+  - Built reusable data tables and dashboard patterns with TanStack.
+  - Built the CRM UI around how salons actually run day to day.
 featured: true
 order: -1

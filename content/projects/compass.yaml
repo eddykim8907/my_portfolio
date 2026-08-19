@@ -43,13 +43,13 @@ links:
   live: null
   repo: null
 context: >
-  Internal ops console for multi-platform commerce analytics. Inherited a
-  production frontend with limited componentization and established the reusable
-  system later development was built on.
+  Internal ops console for commerce analytics across Amazon, TikTok Shop, and
+  Shopify. I inherited a production frontend that was hard to extend, then rebuilt
+  it around reusable pieces that later work could sit on.
 contribution:
-  - Inherited and independently maintained an outdated production frontend with limited componentization and significant hardcoded, repetitive implementations
-  - Refactored the application around reusable components, modules, layouts, templates, and composables, establishing a more maintainable frontend architecture
-  - Rebuilt outdated interfaces with an emphasis on clearer workflows, intuitive UX, and improved data visualization for internal users
-  - Used the new architecture to ship new features and maintain existing functionality without repeatedly rebuilding common UI patterns
+  - Inherited a production frontend with little component structure and a lot of duplicated, hardcoded UI, and maintained it independently
+  - Refactored it into reusable components, modules, layouts, templates, and composables so new work did not keep reinventing the same UI
+  - Rebuilt older screens so internal users could follow the workflow more easily and read dense metrics without as much friction
+  - Shipped new features on that system instead of rebuilding the same UI patterns each time
 featured: true
 order: 2

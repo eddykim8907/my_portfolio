@@ -17,8 +17,8 @@ const { featuredProjects } = useProjects()
             Project timeline
           </h2>
           <p class="mx-auto max-w-xl text-neutral-400 sm:mx-0">
-            Seven products I've helped build, from small B2C launches to
-            internal ops consoles and creator campaign platforms.
+            Seven products I've worked on, including small B2C launches,
+            internal ops consoles, and creator campaign platforms.
           </p>
         </div>
 

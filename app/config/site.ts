@@ -15,21 +15,21 @@ export const siteConfig = {
   name: 'Edward Kim',
   title: 'Web Developer',
   tagline: '~4 years building product web apps',
-  bio: 'Software developer based in Gangnam with about four years of experience, from creator campaign platforms to internal ops consoles and brand portals.',
+  bio: 'Software developer in Gangnam. About four years of work on creator campaign platforms, internal ops consoles, and brand portals.',
   email: 'eddykim8907@gmail.com',
   location: 'Gangnam, Seoul, KR',
   about: {
     paragraphs: [
-      '안녕하세요! I\'m a software developer based in Gangnam with about four years of experience building web applications. Over that time, I have worked on numerous projects, ranging from creator-facing campaign platforms to internal ops consoles and portals for brand clients.',
-      'Although I began my journey as a self-taught frontend developer, I was able to leverage the rise in popularity of AI to accelerate my learning and expand my focus toward full-stack development. While I recognize the immense power of AI in software, I see it as a tool to deepen understanding rather than a replacement for critical thinking and proper planning.',
-      'My approach to starting any project, regardless of whether AI is involved, is to build with a focus on scalability, modularity, and clear documentation.',
-      'I am always willing and eager to learn new tools, practices, and ways of thinking, especially if it will benefit my team or contribute to a project\'s success. I am a strong collaborator and communicator, while also being comfortable working independently and taking ownership of tasks and projects.',
-      'I want to continue growing as an engineer by taking on new challenges, absorbing as much knowledge and experience as I can from my peers, and making contributions that are useful and meaningful.',
+      '안녕하세요! I\'m a software developer in Gangnam. I\'ve been building web applications for about four years, including creator campaign tools, internal ops consoles, and portals for brand clients.',
+      'I started as a self-taught frontend developer. When AI tools got good, I used them to learn faster and take on more full-stack work. I still treat AI as a tool. It helps me get unstuck and understand new things quicker, but it doesn\'t replace thinking through a problem or planning the work.',
+      'On any project, I try to keep the architecture scalable, the code modular, and the docs clear enough that someone else can pick it up.',
+      'I like picking up new tools and ways of working if they help the team or the product. I\'m comfortable collaborating, and I\'m also fine owning something end to end on my own.',
+      'I want to keep growing as an engineer: take on harder problems, learn from the people around me, and ship work that actually helps.',
     ],
     aiAssisted: {
       title: 'AI-assisted development',
       paragraph:
-        'I use AI coding agents such as Cursor and Claude throughout my development workflow for research, implementation, debugging, refactoring, and exploration of unfamiliar technologies. I use these tools to accelerate development while maintaining ownership of architecture, technical decisions, testing, and production quality.',
+        'I use coding agents like Cursor and Claude day to day: looking things up, writing code, debugging, refactoring, and getting up to speed on tools I haven\'t used before. I still own the architecture, the technical calls, and what ships to production.',
     },
   },
   skills: [

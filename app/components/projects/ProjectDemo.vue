@@ -19,7 +19,7 @@ const demoComponent = computed(() => resolveProjectDemo(props.project.demo))
         Interactive preview
       </h2>
       <p class="text-sm text-neutral-400">
-        Reconstructed UI with sample data — not connected to production systems.
+        Reconstructed UI with sample data. Not connected to production systems.
       </p>
     </div>
 

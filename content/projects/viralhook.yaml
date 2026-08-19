@@ -1,6 +1,6 @@
 slug: viralhook
 name: ViralHook
-tagline: Creator pipeline platform from matchmaking through delivery and payment
+tagline: Creator pipeline platform covering matchmaking, delivery, and payment
 role: Sole Frontend Developer · Product Development
 year: "2025.08 – 2025.12"
 startDate: "2025-08"
@@ -45,15 +45,15 @@ links:
   live: null
   repo: null
 context: >
-  Internal paid-creator pipeline from matchmaking through pairing and delivery.
-  Shaped around how ops teams actually work, based on direct conversations with
-  end users rather than assumed workflows.
+  Internal paid-creator pipeline covering matchmaking, pairing, and delivery.
+  The product came out of talking to ops teams about how they already worked,
+  not from guessed workflows.
 contribution:
-  - After promotion, took full ownership of frontend development and built the application from the ground up as the sole frontend developer
-  - Participated in early-stage product ideation and helped translate business needs into practical product features and workflows
-  - Worked directly with end users to understand existing workflows, identify pain points, and gather requirements
-  - Mapped user workflows and collaborated with stakeholders to determine how those processes could be improved through the product
-  - Designed and implemented the frontend architecture and reusable UI systems required to support the evolving product
-  - Balanced user needs, product requirements, and technical constraints when deciding how features should be implemented
+  - After a promotion, owned frontend end to end and built the app as the sole frontend developer
+  - Joined early product discussions and helped turn business needs into features and workflows that ops could actually use
+  - Talked with end users about their current process, what was painful, and what they needed
+  - Mapped those workflows with stakeholders and figured out what the product should change
+  - Designed the frontend architecture and shared UI components as the product grew
+  - When building features, weighed what users asked for against product goals and what was realistic to ship
 featured: true
 order: 4

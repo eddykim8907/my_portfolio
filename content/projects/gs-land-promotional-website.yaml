@@ -24,13 +24,13 @@ links:
   repo: null
 context: >
   Promotional web launch requested by a construction client. Following client
-  direction, I benchmarked Samsung C&T's website, then translated those findings
-  into a custom homepage design and frontend build.
+  direction, I benchmarked Samsung C&T's website, then used that as a reference
+  for a custom homepage design and frontend build.
 contribution:
-  - Benchmarked Samsung C&T's website and used the analysis as a practical reference for structure and visual direction.
+  - Benchmarked Samsung C&T's website and used the analysis as a reference for structure and visual direction.
   - Designed and implemented the homepage frontend using HTML, CSS, and Vanilla JavaScript.
-  - Integrated PHP and CodeIgniter4 within the project delivery flow.
-  - Built interactive sections with SwiperJS and motion effects with GSAP for promotional storytelling.
-  - Delivered responsive behavior and polished UI details for public launch as a Frontend Developer Associate.
+  - Integrated PHP and CodeIgniter4 as part of delivery.
+  - Built interactive sections with SwiperJS and motion effects with GSAP.
+  - Made the homepage responsive and cleaned up UI details for launch.
 featured: true
 order: -2
