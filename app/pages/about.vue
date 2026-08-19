@@ -34,6 +34,15 @@ usePortfolioSeo({
         </p>
       </section>
 
+      <section class="space-y-3">
+        <h2 class="text-sm font-medium uppercase tracking-widest text-neutral-500">
+          {{ site.about.aiAssisted.title }}
+        </h2>
+        <p class="text-lg leading-relaxed text-neutral-400">
+          {{ site.about.aiAssisted.paragraph }}
+        </p>
+      </section>
+
       <AboutSkills />
 
       <section class="flex flex-wrap gap-3 border-t border-neutral-800 pt-10">

@@ -18,7 +18,10 @@ const showHero = computed(() => project.value?.hero && !project.value?.demo)
 
 usePortfolioSeo({
   title: () => project.value!.name,
-  description: () => project.value!.tagline,
+  description: () =>
+    project.value!.highlight
+      ? `${project.value!.tagline}. ${project.value!.highlight}`
+      : project.value!.tagline,
   ogImage: () => project.value!.hero ?? undefined,
 });
 </script>
@@ -63,12 +66,16 @@ usePortfolioSeo({
             {{ project.status }}
           </span>
           <span>{{ project.year }}</span>
-          <span>{{ project.role }}</span>
         </div>
 
         <h1 class="text-3xl font-bold text-white sm:text-4xl">
           {{ project.name }}
         </h1>
+        <p class="mt-3 text-sm text-neutral-400">
+          <span class="text-neutral-500">My role</span>
+          <span class="mx-2 text-neutral-700">·</span>
+          <span class="text-neutral-200">{{ project.role }}</span>
+        </p>
         <p class="mt-4 text-lg text-neutral-400">
           {{ project.tagline }}
         </p>
@@ -79,7 +86,7 @@ usePortfolioSeo({
           {{ project.context }}
         </p>
         <div class="mt-5">
-          <TechStack :items="project.stack" />
+          <ProjectStack :project="project" />
         </div>
         <div
           v-if="project.links?.live || project.links?.repo"
@@ -122,26 +129,18 @@ usePortfolioSeo({
         <ScreenshotGallery :images="galleryImages" :alt-prefix="project.name" />
       </section>
 
+      <ProjectContribution :project="project" />
+
       <section
-        v-if="project.contribution?.length"
+        v-if="project.impact"
         class="space-y-4"
       >
         <h2 class="text-sm font-medium uppercase tracking-widest text-neutral-500">
-          My contribution
+          Impact
         </h2>
-        <ul class="space-y-3">
-          <li
-            v-for="item in project.contribution"
-            :key="item"
-            class="flex gap-3 text-neutral-300"
-          >
-            <span
-              class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full"
-              :style="{ backgroundColor: project.brandColor }"
-            />
-            <span>{{ item }}</span>
-          </li>
-        </ul>
+        <p class="max-w-3xl text-base leading-relaxed text-neutral-300">
+          {{ project.impact }}
+        </p>
       </section>
     </div>
   </UContainer>

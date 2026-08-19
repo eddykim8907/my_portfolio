@@ -27,7 +27,7 @@ defineProps<{
     </div>
 
     <div class="flex flex-1 flex-col p-6">
-      <div class="mb-3 flex items-center gap-2">
+      <div class="mb-3 flex flex-wrap items-center gap-x-2 gap-y-1">
         <span
           class="h-2 w-2 rounded-full"
           :style="{ backgroundColor: project.brandColor }"
@@ -37,6 +37,10 @@ defineProps<{
         >
           {{ project.status }}
         </span>
+        <span class="text-neutral-700">·</span>
+        <span class="text-xs text-neutral-400">
+          {{ project.role }}
+        </span>
       </div>
 
       <h2
@@ -45,11 +49,19 @@ defineProps<{
         {{ project.name }}
       </h2>
 
-      <p class="mb-5 flex-1 text-sm leading-relaxed text-neutral-400">
+      <p class="flex-1 text-sm leading-relaxed text-neutral-400">
         {{ project.tagline }}
       </p>
+      <p
+        v-if="project.highlight"
+        class="mt-3 text-sm leading-relaxed text-neutral-300"
+      >
+        {{ project.highlight }}
+      </p>
 
-      <TechStack :items="project.stack" :limit="4" />
+      <div class="mt-5">
+        <TechStack :items="project.stack" :limit="4" />
+      </div>
     </div>
   </NuxtLink>
 </template>

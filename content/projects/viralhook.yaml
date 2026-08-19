@@ -1,7 +1,7 @@
 slug: viralhook
 name: ViralHook
 tagline: Creator pipeline platform from matchmaking through delivery and payment
-role: Frontend developer
+role: Sole Frontend Developer · Product Development
 year: "2025.08 – 2025.12"
 startDate: "2025-08"
 endDate: "2025-12"
@@ -10,10 +10,31 @@ stack:
   - Nuxt 4
   - Vue 3
   - Supabase
+  - AG Grid Enterprise
   - PrimeVue
   - Tailwind CSS
-  - AG Grid Enterprise
   - Pinia
+  - Coolify
+stackGroups:
+  - category: Core
+    items:
+      - Nuxt 4
+      - Vue 3
+      - Supabase
+      - PrimeVue
+      - Tailwind CSS
+      - Pinia
+      - AG Grid Enterprise
+  - category: Infrastructure
+    items:
+      - Coolify
+      - CI/CD
+  - category: Integrations
+    items:
+      - TikTok Discovery API
+      - Compass API
+      - RapidAPI
+      - Outreach API
 brandColor: "#6366F1"
 logo: /projects/viralhook/logo-white.svg
 logoText: /projects/viralhook/logo-text-white.svg
@@ -24,10 +45,15 @@ links:
   live: null
   repo: null
 context: >
-  Internal paid-creator pipeline from matchmaking through pairing and delivery —
-  shaped around how ops teams actually work.
+  Internal paid-creator pipeline from matchmaking through pairing and delivery.
+  Shaped around how ops teams actually work, based on direct conversations with
+  end users rather than assumed workflows.
 contribution:
-  - After promotion, owned frontend end-to-end — building the app from the ground up while contributing to early product direction
-  - Worked directly with end users to gather requirements, map workflows and pain points, and turn those into practical features
+  - After promotion, took full ownership of frontend development and built the application from the ground up as the sole frontend developer
+  - Participated in early-stage product ideation and helped translate business needs into practical product features and workflows
+  - Worked directly with end users to understand existing workflows, identify pain points, and gather requirements
+  - Mapped user workflows and collaborated with stakeholders to determine how those processes could be improved through the product
+  - Designed and implemented the frontend architecture and reusable UI systems required to support the evolving product
+  - Balanced user needs, product requirements, and technical constraints when deciding how features should be implemented
 featured: true
 order: 4

@@ -1,7 +1,7 @@
 slug: bloomkare
 name: Bloomkare
 tagline: Creator–brand campaign platform for inbound seeding marketing
-role: Full-stack developer
+role: Sole Full-Stack Developer
 year: "2025.12 – 2026.08"
 startDate: "2025-12"
 endDate: "2026-08"
@@ -10,10 +10,37 @@ stack:
   - Nuxt 4
   - Vue 3
   - Supabase
-  - PrimeVue
+  - TikTok API
   - Tailwind CSS
+  - PrimeVue
+  - EasyPost
   - ShipStation
   - Amazon SP-API
+  - Docker
+  - Coolify
+  - Sentry
+stackGroups:
+  - category: Core
+    items:
+      - Nuxt 4
+      - Vue 3
+      - Supabase
+      - PrimeVue
+      - Tailwind CSS
+  - category: Infrastructure
+    items:
+      - Docker
+      - Coolify
+      - CI/CD
+      - Sentry
+  - category: Integrations
+    items:
+      - TikTok API
+      - EasyPost
+      - ShipStation
+      - Amazon SP-API
+      - Webhooks
+      - Scheduled jobs
 brandColor: "#EE5FA4"
 logo: /projects/bloomkare/logo.png
 logoText: /projects/bloomkare/logo-text.svg
@@ -23,12 +50,36 @@ screenshots: []
 links:
   live: https://www.bloomkare.com
   repo: null
+highlight: Thousands of registered accounts · Hundreds of daily active users
 context: >
   Production seeding platform spanning an internal campaign ERP and a creator-facing
-  product for applications, fulfillment, and submissions.
-contribution:
-  - "Owned the product end-to-end — planning and architecture through build and deployment — across frontend and backend"
-  - "Stood up CI/CD, deployment, logging, and monitoring, and wired external APIs (TikTok, Google) plus Forsit’s internal systems"
-  - "Designed and shipped two surfaces — an internal ops dashboard and a creator platform for applications, gamification, and video submissions"
+  product. Replaced a spreadsheet-driven campaign workflow with an automated system
+  used by thousands of registered accounts and hundreds of daily active users.
+contributionGroups:
+  - title: Ownership
+    items:
+      - Sole developer responsible for taking the product from planning and architecture through full-stack development, deployment, and ongoing production maintenance
+      - Designed and built both the internal campaign-management ERP and the creator-facing product — covering applications, gamification, fulfillment, and video submissions — from the ground up
+      - Worked closely with the UX/UI designer and project manager to translate product requirements and integration plans into production systems
+  - title: Campaign automation
+    items:
+      - Replaced a largely spreadsheet-driven creator seeding workflow with an integrated campaign management platform
+      - Automated campaign applications, creator evaluation, fulfillment tracking, submission deadlines, and campaign reporting
+      - Built creator scoring and evaluation logic that automatically accepted or rejected applicants based on defined criteria, reducing the need for manual profile-by-profile review
+  - title: Integrations & backend
+    items:
+      - Integrated TikTok APIs and access-token workflows to collect creator and content data and automate campaign fulfillment checks
+      - Integrated EasyPost and ShipStation webhooks to automatically synchronize shipment status, plus Amazon SP-API for product-related campaign operations
+      - Wired Google APIs and Forsit's internal systems into the campaign workflow
+      - Implemented scheduled jobs for automated deadline enforcement, campaign processing, and result updates
+  - title: Infrastructure
+    items:
+      - Implemented authentication and authorization, backend data flows, third-party integrations, and production infrastructure
+      - Set up CI/CD, Coolify deployment, logging, and monitoring and maintained the application in production
+impact: >
+  The platform grew to thousands of registered accounts and hundreds of daily
+  active users, replacing a manual process that previously required spreadsheet
+  maintenance, creator data entry, TikTok research, fulfillment tracking, video
+  verification, and reporting.
 featured: true
 order: 1

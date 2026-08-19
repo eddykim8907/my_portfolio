@@ -26,6 +26,11 @@ export const siteConfig = {
       'I am always willing and eager to learn new tools, practices, and ways of thinking, especially if it will benefit my team or contribute to a project\'s success. I am a strong collaborator and communicator, while also being comfortable working independently and taking ownership of tasks and projects.',
       'I want to continue growing as an engineer by taking on new challenges, absorbing as much knowledge and experience as I can from my peers, and making contributions that are useful and meaningful.',
     ],
+    aiAssisted: {
+      title: 'AI-assisted development',
+      paragraph:
+        'I use AI coding agents such as Cursor and Claude throughout my development workflow for research, implementation, debugging, refactoring, and exploration of unfamiliar technologies. I use these tools to accelerate development while maintaining ownership of architecture, technical decisions, testing, and production quality.',
+    },
   },
   skills: [
     {
@@ -43,6 +48,7 @@ export const siteConfig = {
   ] satisfies SiteSkillGroup[],
   social: [
     { label: 'GitHub', href: 'https://github.com/edwardkim088', icon: 'github' },
+    { label: 'LinkedIn', href: 'https://www.linkedin.com/in/edward-kim-5a6821375/', icon: 'linkedin' },
     { label: 'Email', href: 'mailto:eddykim8907@gmail.com', icon: 'email' },
   ] satisfies SiteSocialLink[],
   resume: '/resume.pdf',

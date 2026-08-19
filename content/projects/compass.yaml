@@ -1,7 +1,7 @@
 slug: compass
 name: Compass
 tagline: Internal Forsit ops console for multi-platform commerce analytics
-role: Frontend developer
+role: Sole Frontend Developer
 year: "2025.05 – 2025.11"
 startDate: "2025-05"
 endDate: "2025-11"
@@ -13,6 +13,27 @@ stack:
   - AG Grid Enterprise
   - Tailwind CSS
   - Pinia
+  - Docker
+  - Coolify
+stackGroups:
+  - category: Core
+    items:
+      - Nuxt 3
+      - Vue 3
+      - PrimeVue
+      - Tailwind CSS
+      - Pinia
+      - AG Grid Enterprise
+  - category: Infrastructure
+    items:
+      - Docker
+      - Coolify
+      - CI/CD
+  - category: Integrations
+    items:
+      - Amazon
+      - TikTok Shop
+      - Shopify
 brandColor: "#29AAE1"
 logo: /projects/compass/logo.svg
 demo: compass-daily
@@ -22,11 +43,13 @@ links:
   live: null
   repo: null
 context: >
-  Internal ops console for multi-platform commerce analytics — rebuilt on a clearer
-  frontend system so dense metrics views could scale cleanly.
+  Internal ops console for multi-platform commerce analytics. Inherited a
+  production frontend with limited componentization and established the reusable
+  system later development was built on.
 contribution:
-  - Refactored the legacy frontend with a system-first approach — reusable modules, templates, layouts, and composables
-  - Prioritized clearer UX and data visualization so internal users could scan metrics and act without friction
-  - Used those shared systems to maintain existing features while landing new functionality on top of them
+  - Inherited and independently maintained an outdated production frontend with limited componentization and significant hardcoded, repetitive implementations
+  - Refactored the application around reusable components, modules, layouts, templates, and composables, establishing a more maintainable frontend architecture
+  - Rebuilt outdated interfaces with an emphasis on clearer workflows, intuitive UX, and improved data visualization for internal users
+  - Used the new architecture to ship new features and maintain existing functionality without repeatedly rebuilding common UI patterns
 featured: true
 order: 2

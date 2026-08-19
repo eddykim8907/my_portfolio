@@ -9,25 +9,34 @@ const yamlModules = import.meta.glob<string>('@content/projects/*.yaml', {
   import: 'default',
 })
 
+function flattenYamlListItem(item: unknown): string {
+  if (typeof item === 'string') {
+    return item
+  }
+
+  // Unquoted YAML `key: value` list items parse as objects — flatten them.
+  if (item && typeof item === 'object') {
+    return Object.entries(item as Record<string, string>)
+      .map(([key, value]) => `${key}: ${value}`)
+      .join(' ')
+  }
+
+  return String(item)
+}
+
 function loadProjects(): Project[] {
   return Object.values(yamlModules).map((raw) => {
     const project = parse(raw) as Project
 
     if (project.contribution?.length) {
-      project.contribution = project.contribution.map((item) => {
-        if (typeof item === 'string') {
-          return item
-        }
+      project.contribution = project.contribution.map(flattenYamlListItem)
+    }
 
-        // Unquoted YAML `key: value` list items parse as objects — flatten them.
-        if (item && typeof item === 'object') {
-          return Object.entries(item as Record<string, string>)
-            .map(([key, value]) => `${key}: ${value}`)
-            .join(' ')
-        }
-
-        return String(item)
-      })
+    if (project.contributionGroups?.length) {
+      project.contributionGroups = project.contributionGroups.map((group) => ({
+        ...group,
+        items: group.items.map(flattenYamlListItem),
+      }))
     }
 
     return project

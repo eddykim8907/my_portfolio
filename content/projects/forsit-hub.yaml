@@ -1,7 +1,7 @@
 slug: forsit-hub
 name: ForsitHub
 tagline: Client-facing brand portal and multi-platform sales dashboard
-role: Frontend developer
+role: Sole Frontend Developer
 year: "2025.05 – 2025.11"
 startDate: "2025-05"
 endDate: "2025-11"
@@ -10,10 +10,31 @@ stack:
   - Nuxt 3
   - Vue 3
   - PrimeVue
-  - Nitro
   - MySQL
-  - Knex
-  - nuxt-auth-utils
+  - Nitro
+  - Docker
+  - Coolify
+stackGroups:
+  - category: Core
+    items:
+      - Nuxt 3
+      - Vue 3
+      - PrimeVue
+      - Tailwind CSS
+      - Nitro
+      - MySQL
+  - category: Infrastructure
+    items:
+      - Docker
+      - Coolify
+      - CI/CD
+  - category: Integrations
+    items:
+      - Amazon OAuth
+      - TikTok OAuth
+      - YouTube Data API
+      - Instagram RapidAPI
+      - Slack
 brandColor: "#10B981"
 logo: /projects/forsit-hub/logo.svg
 demo: forsit-hub-dashboard
@@ -23,10 +44,13 @@ links:
   live: null
   repo: null
 context: >
-  Authenticated brand portal for multi-platform sales and product performance —
-  a cleaner client experience than raw internal ops tools.
+  Authenticated brand portal for multi-platform sales and product performance.
+  The work included deciding which metrics to surface and how to present them,
+  not only implementing the dashboards.
 contribution:
-  - Modernized the frontend into a modular system of reusable components, layouts, and templates for a clean client experience
-  - Designed and built KPI dashboards — choosing which metrics to surface and how to present them so brands can understand product performance at a glance
+  - Modernized the frontend around reusable components, layouts, and templates, replacing duplicated and hardcoded implementations
+  - Designed and implemented KPI and data aggregation dashboards used by brand clients to understand product performance
+  - Determined which metrics were most useful to surface and designed their presentation so complex performance data was easier to interpret
+  - Implemented new functionality and maintained existing features using the reusable frontend systems introduced during the modernization
 featured: true
 order: 3
